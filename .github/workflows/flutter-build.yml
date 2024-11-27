@@ -507,8 +507,6 @@ jobs:
             export VCPKG_ROOT=/opt/artifacts/vcpkg
             mkdir -p /opt/artifacts
             pushd /opt/artifacts
-            rm -rf vcpkg
-            git clone https://github.com/microsoft/vcpkg
             pushd vcpkg
             git reset --hard ${{ env.VCPKG_COMMIT_ID }}
             # build vcpkg helper executable with gcc-8 for arm-linux but use prebuilt one on x64-linux
